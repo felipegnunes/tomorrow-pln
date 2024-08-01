@@ -1,5 +1,7 @@
 # Tomorrow -- Processamento de Linguagem Natural
 
+Aqui estão as instruções para executar o código das atividades da disciplina:
+
 ## Atividade 01 -- Analisador Morfológico
 
 Para utilizar o analisador morfológico, você pode executar:
@@ -65,10 +67,13 @@ Se você quiser entender como funcionam os classificadores utilizados pelo Anali
 
 ## Atividade 02 -- Etiquetagem morfossintática
 
-Para executar o código do etiquetador morfossintático você deve escolher entre duas opções: train ou test.
+Para executar o código do etiquetador morfossintático você deve escolher entre duas opções: train ou test. Se não for provido nenhum argumento, ele
+treina novamente o tagger.
 
 ```bash
 python3 pos_tagger
+python3 pos_tagger train
+python3 pos_tagger test
 ```
 
 Alternivamente, você pode importar o etiquetador para seu próprio código:
