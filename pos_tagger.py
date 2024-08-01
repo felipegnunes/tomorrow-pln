@@ -103,7 +103,7 @@ def main():
         print('Start training of the POS tagger')
         pos_tagger.train(labeled_tokens)
 
-    print(f'POS tagger accuracy in test set: {pos_tagger.accuracy(test_tokens)}')
+    print(f'\nPOS tagger accuracy in test set: {pos_tagger.accuracy(test_tokens)}')
 
     print('\n')
 
@@ -129,10 +129,11 @@ def main():
     print(f'Accuracy on test sentence: {hits/test_size}')
 
     print()
-    pprint(pos_tagger.tag_string('Meu nome é Felipe Guimarães. Eu sou um cara legal.'))
+    pprint(pos_tagger.tag_string('Isso é uma sentença de teste.'))
 
     if mode == 'train':
         pos_tagger.save()
+
 
 
 if __name__ == '__main__':

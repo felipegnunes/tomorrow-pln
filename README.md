@@ -74,10 +74,15 @@ python3 pos_tagger
 Alternivamente, você pode importar o etiquetador para seu próprio código:
 
 ```python
+from pos_tagger import POSTagger
 
+# Utilizando o modelo já treinado, salvo em pos_tagger.pickle
 pos_tagger = POSTagger('pos_tagger')
+pos_tagger.load()
 
-test_predicted = pos_tagger.tag_sentence(test_sentence)
+# A sentença pode ser uma lista de dicionários
+test_predicted = pos_tagger.tag_sentence([{'form': 'Isso'}, {'form': 'é'}, {'form': 'legal'}, {'form': '.'}])
 
-test_predicted = pos_tagger.tag_string('A casa está sobre a colina verde.')
+# Ou apenas uma string
+sentence_tagged = pos_tagger.tag_string('Isso é uma sentença de teste.')
 ```
