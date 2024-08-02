@@ -6,7 +6,7 @@ Aqui estão as instruções para executar o código das atividades da disciplina
 
 Para utilizar o analisador morfológico, você pode executar:
 ```bash
-python analisador_morfologico.py
+python3 analisador_morfologico.py
 ```
 
 Alternativamente, você pode importar a classe AnalisadorMorfologico para o seu próprio código:
