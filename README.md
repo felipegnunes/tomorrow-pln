@@ -129,7 +129,6 @@ Se você quiser utilizar um texto da sua preferência, veja um exemplo de uso em
 
 O modelo base utilizado foi o BERTimbau Base (neuralmind/bert-base-portuguese-cased). Esse modelo foi treinado no dataset **celsowm/bbc_news_ptbr** do Hugging Face. 
 
-
 Você pode encontrar notícias para testar em https://www.bbc.com/portuguese, elas são
 da mesma fonte de dados do dataset, portanto separadas pelas mesmas categorias.
 
