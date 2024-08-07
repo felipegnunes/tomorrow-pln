@@ -163,4 +163,4 @@ cython_debug/
 
 news_dataset.hf/
 news_model/
-training_output
+training_output/
