@@ -76,7 +76,7 @@ python3 pos_tagger train
 python3 pos_tagger test
 ```
 
-Alternivamente, você pode importar o etiquetador para seu próprio código:
+Alternativamente, você pode importar o etiquetador para seu próprio código:
 
 ```python
 from pos_tagger import POSTagger
