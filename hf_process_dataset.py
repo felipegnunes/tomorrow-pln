@@ -18,4 +18,9 @@ def prepare_dataset():
 
 dataset = prepare_dataset()
 
+dataset = dataset.shuffle(seed=55)
+dataset = dataset.flatten_indices()  # rewrite the shuffled dataset on disk as contiguous chunks of data
+
+print(dataset)
+
 dataset.save_to_disk("news_dataset.hf")

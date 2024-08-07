@@ -91,3 +91,45 @@ test_predicted = pos_tagger.tag_sentence([{'form': 'Isso'}, {'form': 'é'}, {'fo
 # Ou apenas uma string
 sentence_tagged = pos_tagger.tag_string('Isso é uma sentença de teste.')
 ```
+
+## Atividade 03 -- Classificação utilizando transformers
+
+Obs.: Professor, não precisa baixar o dataset nem treinar o modelo, já estou enviando-os na pasta.
+
+Para não haver mistura entre treino, validação e teste, vamos primeiro baixar o dataset do Hugging Face e guardá-lo pré-processado:
+```bash
+python3 hf_process_dataset.py
+```
+
+O dataset pré-processado fica salvo em news_dataset.hf.
+
+Para medir a acurácia do modelo salvo localmente em news_model/:
+```bash
+python3 hf_testing.py
+```
+
+Se você quiser treinar o modelo do zero. Altere as seguintes variáveis globais em hf_training.py para:
+```python
+    START_FROM_ZERO = True
+    EPOCHS_TO_TRAIN = 1
+```
+
+Caso queira continuar o treinamento de onde ele parou, utilize:
+```python
+    START_FROM_ZERO = False
+    EPOCHS_TO_TRAIN = 1
+```
+
+Então execute:
+```bash
+python3 hf_training.py
+```
+
+Se você quiser utilizar um texto da sua preferência, veja um exemplo de uso em **hf_classification.py**.
+
+O modelo base utilizado foi o BERTimbau Base (neuralmind/bert-base-portuguese-cased). Esse modelo foi treinado no dataset **celsowm/bbc_news_ptbr** do Hugging Face. 
+
+
+Você pode encontrar notícias para testar em https://www.bbc.com/portuguese, elas são
+da mesma fonte de dados do dataset, portanto separadas pelas mesmas categorias.
+

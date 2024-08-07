@@ -70,9 +70,9 @@ for i, test_data in enumerate(test_dataset):
     print(f"label={test_data['categoria']} predicted={labels_int2str[predicted_index]}")
     print()
 
-print(references)
-print()
-print(predictions)
+# print(references)
+# print()
+# print(predictions)
 
 # outputs = model(**pt_batch)
 # predictions = nn.functional.softmax(outputs.logits, dim=-1)

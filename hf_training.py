@@ -6,7 +6,7 @@ import evaluate
 import numpy as np
 
 START_FROM_ZERO = True
-EPOCHS_TO_TRAIN = 1
+EPOCHS_TO_TRAIN = 2
 
 labels_str2int = {'tecnologia': 0,
                   'economia': 1,
@@ -57,12 +57,13 @@ def tokenize_function(sample):
 
 tokenized_dataset = dataset.map(tokenize_function, batched=True)
 
-if not START_FROM_ZERO:
-    model = AutoModelForSequenceClassification.from_pretrained(
-        './news_model', num_labels=len(labels_str2int))
-else:
+if START_FROM_ZERO:
     model = AutoModelForSequenceClassification.from_pretrained(
         'neuralmind/bert-base-portuguese-cased', num_labels=len(labels_str2int))
+else:
+    model = AutoModelForSequenceClassification.from_pretrained(
+        './news_model', num_labels=len(labels_str2int))
+    
 
 metric = evaluate.load('accuracy')
 
